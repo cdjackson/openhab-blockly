@@ -1,0 +1,31 @@
+{
+  "name": "openhab_blockly",
+  "version": "0.0.0",
+  "homepage": "https://github.com/cdjackson/openhab_blockly",
+  "authors": [
+    "Chris Jackson <chris@cd-jackson.com>"
+  ],
+  "description": "Blockly rule designer for openhab",
+  "keywords": [
+    "openhab",
+    "blockly"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "tests",
+    "appengine",
+    "blocks",
+    "core",
+    "demos",
+    "generators",
+    "i18n",
+    "msg",
+    "build.py",
+    "COPYING",
+    "dart_compressed.js",
+    "javascript_compressed.js",
+    "python_compressed.js",
+    "README.md"
+  ]
+}
