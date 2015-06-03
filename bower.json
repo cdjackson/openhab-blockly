@@ -20,7 +20,6 @@
     "demos",
     "generators",
     "i18n",
-    "msg",
     "build.py",
     "COPYING",
     "dart_compressed.js",
