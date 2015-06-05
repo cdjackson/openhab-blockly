@@ -6,7 +6,7 @@
   <title>Blockly Demo:</title>
   <link rel="stylesheet" href="style.css">
   <script src="/storage.js"></script>
-  <script src="../../blockly_compressed.js"></script>
+  <script src="../../blockly_uncompressed.js"></script>
   <script src="../../blocks_compressed.js"></script>
   <script src="../../javascript_compressed.js"></script>
   <script src="../../python_compressed.js"></script>
@@ -41,6 +41,8 @@
             <td class="tabmin">&nbsp;</td>
             <td id="tab_dart" class="taboff">Dart</td>
             <td class="tabmin">&nbsp;</td>
+            <td id="tab_json" class="taboff">JSON</td>
+            <td class="tabmin">&nbsp;</td>
             <td id="tab_xml" class="taboff">XML</td>
             <td class="tabmax">
               <button id="trashButton" class="notext" title="...">
@@ -67,6 +69,7 @@
   <pre id="content_php" class="content"></pre>
   <pre id="content_python" class="content"></pre>
   <pre id="content_dart" class="content"></pre>
+  <textarea id="content_json" class="content" wrap="off"></textarea>
   <textarea id="content_xml" class="content" wrap="off"></textarea>
 
   <xml id="toolbox" style="display: none">

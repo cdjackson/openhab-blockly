@@ -243,7 +243,7 @@ Code.LANG = Code.getLang();
  * List of tab names.
  * @private
  */
-Code.TABS_ = ['blocks', 'javascript', 'php', 'python', 'dart', 'xml'];
+Code.TABS_ = ['blocks', 'javascript', 'php', 'python', 'dart', 'json', 'xml'];
 
 Code.selected = 'blocks';
 
@@ -273,7 +273,29 @@ Code.tabClick = function(clickedName) {
     }
   }
 
-  if (document.getElementById('tab_blocks').className == 'tabon') {
+    // If the XML tab was open, save and render the content.
+    if (document.getElementById('tab_json').className == 'tabon') {
+        var jsonTextarea = document.getElementById('content_json');
+        var jsonText = jsonTextarea.value;
+        var jsonObject = null;
+        try {
+            jsonObject = Blockly.JSON.textToObject(jsonText);
+        } catch (e) {
+            var q =
+                window.confirm(MSG['badXml'].replace('%1', e));
+            if (!q) {
+                // Leave the user on the JSON tab.
+                return;
+            }
+        }
+        if (jsonObject) {
+            Code.workspace.clear();
+            Blockly.JSON.objectToWorkspace(Code.workspace, jsonObject);
+        }
+    }
+
+
+    if (document.getElementById('tab_blocks').className == 'tabon') {
     Code.workspace.setVisible(false);
   }
   // Deselect all tabs and hide all panes.
@@ -340,6 +362,13 @@ Code.renderContent = function() {
       code = prettyPrintOne(code, 'dart');
       content.innerHTML = code;
     }
+  }
+    else if (content.id == 'content_json') {
+      var jsonTextarea = document.getElementById('content_json');
+      var jsonObject = Blockly.JSON.workspaceToObject(Code.workspace);
+     // var jsonText = Blockly.JSON.domToPrettyText(jsonDom);
+      jsonTextarea.value = Blockly.JSON.objectToText(jsonObject);
+      jsonTextarea.focus();
   }
 };
 

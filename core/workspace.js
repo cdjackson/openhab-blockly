@@ -25,10 +25,12 @@
 'use strict';
 
 goog.provide('Blockly.Workspace');
-
+goog.require('Blockly.ScrollbarPair');
+goog.require('Blockly.Trashcan');
+goog.require('Blockly.Xml');
+goog.require('Blockly.JSON');
 goog.require('goog.math');
-
-
+goog.require('goog.math.Coordinate');
 /**
  * Class for a workspace.  This is a data structure that contains blocks.
  * There is no UI, and can be created headlessly.
