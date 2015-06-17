@@ -49,6 +49,7 @@ goog.addDependency("../../../" + dir + "/core/generator.js", ['Blockly.Generator
 goog.addDependency("../../../" + dir + "/core/icon.js", ['Blockly.Icon'], ['goog.dom']);
 goog.addDependency("../../../" + dir + "/core/inject.js", ['Blockly.inject'], ['Blockly.Css', 'Blockly.WorkspaceSvg', 'goog.dom', 'goog.ui.Component', 'goog.userAgent']);
 goog.addDependency("../../../" + dir + "/core/input.js", ['Blockly.Input'], ['Blockly.Connection', 'Blockly.FieldLabel', 'goog.asserts']);
+goog.addDependency("../../../" + dir + "/core/json.js", ['Blockly.JSON'], []);
 goog.addDependency("../../../" + dir + "/core/msg.js", ['Blockly.Msg'], []);
 goog.addDependency("../../../" + dir + "/core/mutator.js", ['Blockly.Mutator'], ['Blockly.Bubble', 'Blockly.Icon', 'Blockly.WorkspaceSvg', 'goog.dom', 'goog.Timer']);
 goog.addDependency("../../../" + dir + "/core/names.js", ['Blockly.Names'], []);
@@ -63,7 +64,7 @@ goog.addDependency("../../../" + dir + "/core/utils.js", ['Blockly.utils'], ['go
 goog.addDependency("../../../" + dir + "/core/variables.js", ['Blockly.Variables'], ['Blockly.Workspace', 'goog.string']);
 goog.addDependency("../../../" + dir + "/core/warning.js", ['Blockly.Warning'], ['Blockly.Bubble', 'Blockly.Icon']);
 goog.addDependency("../../../" + dir + "/core/widgetdiv.js", ['Blockly.WidgetDiv'], ['Blockly.Css', 'goog.dom']);
-goog.addDependency("../../../" + dir + "/core/workspace.js", ['Blockly.Workspace'], ['goog.math']);
+goog.addDependency("../../../" + dir + "/core/workspace.js", ['Blockly.Workspace'], ['Blockly.ScrollbarPair', 'Blockly.Trashcan', 'Blockly.Xml', 'Blockly.JSON', 'goog.math', 'goog.math.Coordinate']);
 goog.addDependency("../../../" + dir + "/core/workspace_svg.js", ['Blockly.WorkspaceSvg'], ['Blockly.ScrollbarPair', 'Blockly.Trashcan', 'Blockly.Workspace', 'Blockly.Xml', 'goog.dom', 'goog.math.Coordinate', 'goog.userAgent']);
 goog.addDependency("../../../" + dir + "/core/xml.js", ['Blockly.Xml'], ['goog.dom']);
 goog.addDependency("../../alltests.js", [], []);
@@ -1562,6 +1563,7 @@ goog.require('Blockly.Flyout');
 goog.require('Blockly.Generator');
 goog.require('Blockly.Icon');
 goog.require('Blockly.Input');
+goog.require('Blockly.JSON');
 goog.require('Blockly.Msg');
 goog.require('Blockly.Mutator');
 goog.require('Blockly.Names');
